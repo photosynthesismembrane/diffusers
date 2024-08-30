@@ -1,3 +1,20 @@
+### Habrok retraining scripts:
+
+The generic script `train.sh` can be used to retrain a diffusion model on a specific dataset, using Habrok.
+
+The following scripts can be used to execute a retraining schedule on stable-diffusion-v1.5 with datasets [abstract, landscape, renaissance] annotated by VLM's [llava, cogvlm, deepseek], for a number of 8k iterations:
+
++ `train_abstract.sh`
++ `train_landscape.sh`
++ `train_renaissance.sh`
+
+Validation prompts can be used to generate images during the training process. This is done in these scripts, training the same set of diffusion models as above for 35k iterations:
+
++ `train_abstract_validation.sh`
++ `train_landscape_validation.sh`
++ `train_renaissance_validation.sh`
+
+
 # Stable Diffusion text-to-image fine-tuning
 
 The `train_text_to_image.py` script shows how to fine-tune stable diffusion model on your own dataset.
